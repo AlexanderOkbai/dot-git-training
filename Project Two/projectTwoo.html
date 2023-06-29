@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #bigImage {
+            width: 600px;
+            height: 600px;
+            margin-left: 30%;
+        }
+
+        .im {
+            display: grid;
+            margin:30px;
+        }
+
+        .imge:hover {
+            transform: scale(1.1);
+            
+        }
+
+        .imge {
+
+            width: 200px;
+            height: 200px;
+
+        }
+    </style>
+    <script>
+        function changeImage(e) {
+
+            //console.log(e.currentTarget.src);//gets the source of the image that was clicked
+            var bigImage = document.getElementById("bigImage").getAttribute("src"); // gets the source of the large image and stores in variable
+            document.getElementById("bigImage").setAttribute("src", e.currentTarget.src);//sets the source of the large image to the source of the image that was clicked
+            document.getElementById(e.currentTarget.id).setAttribute("src", bigImage);//sets the source of the image that was clicked on to the source of the large image 
+        }
+    </script>
+
+</head>
+
+<body>
+    <img class="mainImage" id="bigImage" src="image.jpg" alt="big Image">
+
+    <div id="im">
+        <img class="imge" style="margin-left: 25%;" id="image1" onclick="changeImage(event)" src="image1.jpg"
+            alt="flower">
+        <img class="imge" id="image2" onclick="changeImage(event)" src="image2.jpg" alt="flower">
+        <img class="imge" id="image3" onclick="changeImage(event)" src="image3.jpg" alt="flower">
+        <img class="imge" id="image4" onclick="changeImage(event)" src="image4.jpg" alt="flower">
+    </div>
+</body>
+
+</html>

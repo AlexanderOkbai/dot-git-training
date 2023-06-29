@@ -1,0 +1,27 @@
+#parent{
+    border: 1px solid rgb(222, 215, 215);
+    margin: 20px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    height: 80px;
+    animation: blinker 3000ms linear infinite;
+   
+}
+
+
+  
+  @keyframes blinker {
+    30% {
+      opacity: 0;
+    }
+  }
+
+
+
+#child2{
+    font-weight: bold;
+  
+    
+}

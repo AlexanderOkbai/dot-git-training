@@ -1,0 +1,26 @@
+.parent {
+
+    display: flex;
+
+}
+
+.child {
+
+    max-width: 485px;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 20px;
+    margin-right: 1px;
+    border: 1px solid rgb(212, 213, 214);
+    transition-delay: 1s;
+    transition: background-color 2s ease-in-out;
+
+}
+
+.child:hover {
+    background-color: aqua;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px,
+        rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px,
+        rgba(240, 46, 170, 0.05) -25px 25px;
+}
